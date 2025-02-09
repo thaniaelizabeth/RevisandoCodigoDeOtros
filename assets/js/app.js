@@ -4,7 +4,7 @@ const baseEndpoint = 'https://api.github.com';
 const usersEndpoint = `${baseEndpoint}/users`;
 const nombre = document.querySelector( '.name' ); // Cambié el nombre de la variable por algo más intuitivo y que no llevara caracteres especiales. Agregué un punto antes de name ya que se trata de una clase.
 const blog = document.querySelector( '.blog' ); // Cambié el nombre de la variable para que fuera algo más intuitivo. Blog se trata de una clase, por ello le cambie por un punto.
-const locacion = document.querySelector( '.location' ); // Cambié el nombre de la variable para que fuera algo más intuitivo.
+const ubicacion = document.querySelector( '.location' ); // Cambié el nombre de la variable para que fuera algo más intuitivo.
 
 async function displayUser ( username ) {  // Agregué un async al inicio de la función, ya que así corresponde la sintaxis cuando hay un await.
   try{  // Agregué un try para hacer el manejo de excepciones
@@ -14,7 +14,7 @@ async function displayUser ( username ) {  // Agregué un async al inicio de la 
   console.log( data ); // Esta data que se quiere imprimir viene de response
   nombre.textContent = `${data.name}`; // Aquí deben ir template literals
   blog.textContent = `${data.blog}`; // Aquí deben ir template literals
-  locacion.textContent = `${data.location}`; // Aquí deben ir template literals
+  ubicacion.textContent = `${data.location}`; // Aquí deben ir template literals
 } catch ( err ) {  // Agregué el catch para hacer el manejo de las excepciones y vincular la función de hadleError
   handleError( err );
 
